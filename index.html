@@ -3,37 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accesibilidad para Todos</title>
+  <title>Minecraft sites</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
 <style>
-
-nav{
-  position: fixed;
-  
-}
-
-#botonprimera{
-  display: inline-block
-}
-#carrusel{
-  margin-top: 3em;
-  background-color: whitesmoke;
-}
-div.img{
-  width: 100px;
-}
 .navbar-brand{
   font-size: 10px;
 }
+.primeracontenedor{
+  position: relative;
+  max-width: 100%;
+
+
+}
+.primerafoto{
+  margin-top: 2em;
+width: 800px;
+}
+.textoimagen{
+  position: absolute;
+  display:grid;
+  top:228px;
+  left: 45px;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  border: 0.3em ridge rgb(165, 89, 42) ;
+  border-radius: 10%;
+}
+
+
 .textocarrusel{
   padding: 2em;
   background-color: aliceblue;
   margin-top: 1em;
   font-family: 'Trebuchet MS';
   font-weight: bold;
+  text-align: center;
   
 }
+#carrusel{
+  margin-top: 3em;
+  background-color: whitesmoke;
+  max-width: 100%;
+}
+       /* Estilos personalizados para la barra de redes sociales */
+       .social-icons {
+            list-style: none;
+            padding: 0;
+            
+        }
+
+        .social-icons li {
+            display: inline;
+            margin-right: 10px; /* Espacio entre los íconos */
+            height: 2em;
+        }
+
+        .social-icons a {
+            color: #333; /* Color de los íconos */
+        }
 
 </style>
 </head>
@@ -41,8 +70,8 @@ div.img{
   <header>
       
 <!-- Barra de navegación -->
-  <nav class="navbar bg-dark border-bottom fixed-top bg-body-tertiary" data-bs-theme="dark" >
-      <div class="container">
+  <nav class="navbar bg-dark navbar-expand-lg fixed-top  navbar-light bg-light" data-bs-theme="dark" >
+      <div class="container ">
         
       <a class="navbar-brand" href="https://www.minecraft.net/es-es/about-minecraft" id="navegador">Juegos</a>
       <a class="navbar-brand" href="https://www.minecraft.net/es-es/community" id="navegador">Comunidad</a>
@@ -60,53 +89,62 @@ div.img{
       
 
   <!-- Contenido principal -->
-  <div class="container mt-5">
-    <div class="row" id="primera">
-
-      <div class="col-lg-8" >
-      <img src="primera.jpg" alt="primerafoto" width="1000" >
+  <div class="container mt-5 row primeracontenedor"  >
+    
+    <div class="primera"><img src="primera.jpg" alt="primerafoto"  class="primerafoto" >
+    
+      <div class=" textoimagen"  >
+      <mark>Descubre</mark> <a href="https://www.hobbyconsolas.com/guias-trucos/minecraft/minecraft-guia-basica-principiantes-como-empezar-jugar-88340">
+        <button class="btn btn-success" data-bs-toggle="collapse" >Cómo jugar</button>
+        </a>  
       </div>
-        <a href="https://www.hobbyconsolas.com/guias-trucos/minecraft/minecraft-guia-basica-principiantes-como-empezar-jugar-88340">
-        <button id="botonprimera" class="btn btn-success" data-bs-toggle="collapse" aria-expanded="false">Cómo jugar
-
-        </button>
-        </a>
-      </div>
-      
+      <div class="botonprimera">
+      </div> 
+    </div>  
   </div>
+
+
 <div class="container" id="carrusel">
   <p class="textocarrusel">EXPLORA LOS JUEGOS Y ADD-ONS DE MINECRAFT</p>
 
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="uno.jpg" class="d-block w-100" alt="fotouno" id="fotitocarrusel">
+
+  <div>
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="uno.jpg" class="d-block w-100" alt="..." >
+      </div>
+      <div class="carousel-item">
+        <img src="dos.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="tres.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="cinco.jpg" class="d-block w-100" alt="foto5">
     </div>
-    <div class="carousel-item">
-      <img src="dos.jpg" class="d-block w-100" alt="fotodos" id="fotitocarrusel">
-    </div>
-    <div class="carousel-item">
-      <img src="tres.jpg" class="d-block w-100" alt="fototres" id="fotitocarrusel">
-    </div>
-    <div class="carousel-item">
-      <img src="cuatro.jpg" class="d-block w-100" alt="fotocuatro" id="fotitocarrusel">
-    </div>
-    <div class="carousel-item">
-      <img src="cinco.jpg" class="d-block w-100" alt="foto5" id="fotitocarrusel">
-    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><img src= flechdere.png  alt=""></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><img src= flechaizq.png  alt=""></span></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<br>
+<nav class="navbar bg-dark side-top  .active" data-bs-theme="dark" > 
+  <ul class="social-icons">
+    <li><a href="https://facebook.com"><img src="face.png" alt="Facebook" width="30"></a></li>
+    <li><a href="https://twitter.com"><img src="twitt.png" alt="Twitter" width="30"></a></li>
+    <li><a href="https://instagram.com"><img src="inst.png" alt="Instagram" width="30"></a></li>
+    <!-- Agrega más enlaces y logotipos de redes sociales según sea necesario -->
+</ul>
+</nav>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   
 </body>
 </html>
